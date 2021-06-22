@@ -30,7 +30,7 @@ twitter_username: vespergu
 github_username:  vespergu
 
 # Build settings
-theme: slate
+theme: jekyll-theme-slate
 plugins:
   - jekyll-feed
 
