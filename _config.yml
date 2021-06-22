@@ -1,5 +1,6 @@
-title: jekyll-rtd-theme
-description: Just another documentation theme compatible with GitHub Pages
+title: TVUNetworks MMA API
+lang: en
+description: API For MMA
 
 remote_theme: rundocs/jekyll-rtd-theme
 
