@@ -1,6 +1,4 @@
-# JustinChen@TVU 2020-01-29
-# JustinChen@TVU 2020-03-06: add bucket 
-# VesperGu@TVU 2020-05-12: add story 
+# export
 
 
 **Brief Description** 
@@ -10,7 +8,7 @@
 
 **Request URL** 
 - `https://resource.tvunetworks.com:443/resource/v1/export`
-  
+
 **Request Method**
 - POST 
 
