@@ -1,12 +1,12 @@
-> JustinChen@TVU 2020-01-29
 
-**Brief Description** 
+
+# remove
 
 - delete the exported file in service
 
 **Request URL** 
 - `https://resource.tvunetworks.com:443/resource/v1/delete`
-  
+
 **Request Method**
 - POST 
 
@@ -44,4 +44,4 @@
 **Comment** 
 
 - 
-        
+  ​      
