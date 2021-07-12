@@ -3,11 +3,10 @@
 
 **Brief Description** 
 
-- get the first frame of the hi-res media file
-- export hi-res media data
+- export hi-res media data to s3 dir
 
 **Request URL** 
-- `https://resource.tvunetworks.com:10600/export`
+- `https://resource.tvunetworks.com:10600/export-to-s3dir`
   
 **Request Method**
 - POST 
@@ -17,7 +16,7 @@
 ```JSON
 {
 	"_ServiceName": "resourceservice",
-	"_UrlPath": "export",
+	"_UrlPath": "export-to-s3dir",
 	"_Version":1,
 
 	"ServiceCaller": "mma",
@@ -29,35 +28,11 @@
 	"FileName": "04-60C262253621833_0.0993375889",
 	"SessionId": "2A39603DDB0F47CFB32E96C8366084AE",
 	"export_type": 1,
-	"FetchMedia": true,
-	"S3Region": "ap-northeast-1",	//depricated
-	"S3Bucket": "imgbed",	//depricated
 	"storage_info" : "BASE64 string",
 	"userid": "dev@tvunetworks.com",
-	"story": {
-		"id": "4B999DC458FBC4C800000000",
-		"name": "04-60C262253621833_0.0993375889",
-		"slug_info": "base64 string",
-	}
-}
-
-Get thumbnail only
-
-{
-	"_ServiceName": "resourceservice",
-	"_UrlPath": "export",
-	"_Version":1,
-
-	"StartPos": 1562253612833,
-	"StartTime": "00:13:12",
-	"Duration": 9000,
-	"PeerId": "4D7446C8141EE167",
-	"LivePath": "mp4/55524C2004E/55524C2041268-6bdb82b53e0a/1/stream.mpd",
-	"FileName": "04-60C262253621833_0.0993375889",
-	"SessionId": "2A39603DDB0F47CFB32E96C8366084AE",
-	"FetchMedia": false,
-	"FetchThumb": true,
-	"userid": "dev@tvunetworks.com",
+	"ExportS3Region": "us-west-1",
+	"ExportS3Bucket": "export",
+	"ExportS3Key": "AKIAKMEWDHAJQH4YLNFN:SQwJeOobv82932fksfel+/6V7uiRVgudrJF4oTH",
 }
 
 ```
@@ -71,41 +46,15 @@ Get thumbnail only
 |StartTime |\*  |string | in millisecond. Relative time of mark.
 |Duration |\*  |number | in millisecond 
 |LivePath |\*  |string | Get from Search API 
-|FetchMedia |\*  |boolean | this field decides whether generate file or not when API is invoked. You can use `false` to get the thumbnail of the first frame. The default value is `false`
-|FetchThumb |  |boolean | You can use `true` to get the thumbnail of any frame. The default value is `false`. FetchMedia must be `false`.
 |FileName |  |string | the final file name
 |SessionId |  |string  | for auth
 |export_type |  |number | `0` 、`1` or `2`, the default value is `0`, `1` is H.264, `2` is H.265.
-|S3Region |  |string  |s3 region
-|S3Bucket |  |string  |s3 bucket
 |userid |  |string  |the id of user
-|story |  |pairs  |"id":"","name":"", "slug_info": "base64 string",
+|ExportS3Region |  |string  |export s3 region
+|ExportS3Bucket |  |string  |export s3 bucket
+|ExportS3Key |  |string  |export s3 key
 
 **Example of Response**
-
-- "FetchMedia": false
-```JSON
-{
-	"TimeWait":0,
-	"ErrorCode":0,
-	"ErrorMessage":"Success",
-	"ImagePath":"/4B999DC458FBC4C80000000000000002/4B999DC458FBC4C80000000000000002_20200316-02-21-49_4B999DC458FBC4C80000000000000002_FE31F2B2CEAA2E63_4b13335c-2fc1-45ea-9cb5-f92065a26e91_1584973791094_7170000.jpg",
-	"S3Dir":"export",
-}
-```
-
-- "FetchMedia": true
-```JSON
-{
-	"TimeWait":2000,
-	"ErrorCode":1,
-	"ErrorMessage":"Work Not Finish",
-	"ImagePath":"/4B999DC458FBC4C80000000000000002/4B999DC458FBC4C80000000000000002_20200316-02-21-49_4B999DC458FBC4C80000000000000002_FE31F2B2CEAA2E63_4b13335c-2fc1-45ea-9cb5-f92065a26e91_1584973791094_7170000.jpg",
-	"S3Dir":"export",
-	"LackLength":123000
-}
-```
-
  ```JSON
 {
 	"TimeWait":2000,
@@ -159,14 +108,5 @@ Get thumbnail only
 			"storage_root_folder": ""
 		}
 	]
-	
-	
-	"slug_info" : {
-    	"slug_id":"abcdefghig",
-    	"slug_name":"test",
-    	"slug_date":"",
-    	"clipped_date":"",
-    	"clip_length":""
-	}
 	
 ```
