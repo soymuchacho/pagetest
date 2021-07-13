@@ -1,10 +1,12 @@
+# getthumbnail
+
 **Brief Description** 
 
 - get the thumbnail of the hi-res media
 
 **Request URL** 
 - `https://resource.tvunetworks.com:10600/api/resource/v1/i/getthumbnail`
-  
+
 **Request Method**
 - POST 
 

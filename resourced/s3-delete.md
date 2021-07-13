@@ -1,4 +1,4 @@
-
+#s3-delete
 
 
 **Brief Description** 
@@ -7,7 +7,7 @@
 
 **Request URL** 
 - `https://resource.tvunetworks.com:10600/api/resource/v1/i/s3-delete`
-  
+
 **Request Method**
 - POST 
 

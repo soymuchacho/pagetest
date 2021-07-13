@@ -1,10 +1,12 @@
+# upload-to-tvu-dirver
+
 **Brief Description** 
 
 - upload file to tvu driver
 
 **Request URL** 
 - `https://resource.tvunetworks.com:10600/api/resource/v1/i/upload-to-tvu-driver`
-  
+
 **Request Method**
 - POST 
 
@@ -61,5 +63,5 @@
 |Parameter|Type|Description|
 |:-----  |:-----|----- |
 |ErrorCode |number  | `1` means task is processing, `5` means ready to upload |
-|ErrorMessage |string  | 
+|ErrorMessage |string  |
 |TimeWait |number  | the upload wait time ms

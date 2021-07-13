@@ -1,5 +1,4 @@
-
-
+# upload
 
 **Brief Description** 
 
@@ -7,7 +6,7 @@
 
 **Request URL** 
 - `https://https://mma.tvunetworks.com:8001/api/imgbed/v1/upload`
-  
+
 **Request Method**
 - POST 
 

@@ -1,4 +1,4 @@
-
+# rename
 
 
 **Brief Description** 
@@ -7,7 +7,7 @@
 
 **Request URL** 
 - `https://resource.tvunetworks.com:10600/rename`
-  
+
 **Request Method**
 - POST 
 
@@ -53,7 +53,7 @@
 	"ErrorCode":-1,
 	"ErrorMessage":"not such dir"
 }
- ```
+```
 
 **Parameters of Response**
 

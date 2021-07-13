@@ -1,5 +1,4 @@
-
-
+# delete
 
 **Brief Description** 
 
@@ -7,7 +6,7 @@
 
 **Request URL** 
 - `https://mma.tvunetworks.com:8001/api/imgbed/v1/delete`
-  
+
 **Request Method**
 - POST 
 
